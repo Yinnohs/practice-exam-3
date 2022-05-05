@@ -1,17 +1,25 @@
 package problemClass;
 
+import advanceDataTypes.CustomStack;
+
 public class Robot {
     private String name;
-    private int productSpace;
+    private CustomStack<Product> products;
 
-    private int MAX_SPACE = 5;
-
-    public Robot(String name, int productSpace) {
+    public Robot(String name) {
         this.name = name;
-        this.productSpace = productSpace;
+        this.products = new CustomStack<>();
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public Product unload() {
+        return this.products.pop();
+    }
 
-
+    public  void  load(Product element){
+        this.products.push(element);
+    }
 }

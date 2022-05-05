@@ -13,7 +13,7 @@ public class CustomStack<T>{
         this.values.add(element);
     }
 
-    public  T pop (T element){
+    public  T pop (){
         return this.values.remove(this.values.size() -1);
     }
 }
