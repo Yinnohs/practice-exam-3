@@ -6,13 +6,13 @@ public class Product {
 
     public Product(String name, Double price){
         this.name = name;
-        this.price = price;
+        this.price = Math.round(price * 100.0) / 100.0;
     }
 
     @Override
     public String toString(){
         return "name: " + this.name + "\n"+
-                "price" + this.price + "\n";
+                "price: " + this.price + "\n";
     }
 
 }

@@ -6,9 +6,16 @@ public class Robot {
     private String name;
     private CustomStack<Product> products;
 
-    public Robot(String name) {
+    private int maxProducts;
+
+    public Robot(String name, int maxProducts) {
         this.name = name;
         this.products = new CustomStack<>();
+        this.maxProducts = maxProducts;
+    }
+
+    public int getMaxProducts() {
+        return maxProducts;
     }
 
     public String getName() {
